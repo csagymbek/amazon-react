@@ -1,0 +1,35 @@
+.header {
+  background-color: #121921;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 100px;
+  margin-top: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+}
+
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header__searchIcon {
+  background-color: #f3a847;
+  padding: 5px;
+  height: 22px !important;
+}
+
+.header__nav {
+}
