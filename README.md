@@ -8,6 +8,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 2. Firebase Authentication and Database
 3. Firebase Hosting for Deployment
 4. Multiple web pages on single app using React Router
+5. Amazon Ember font `@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);`
 
 ### Steps:
 
