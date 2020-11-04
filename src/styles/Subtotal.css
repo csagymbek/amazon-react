@@ -1,0 +1,35 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+
+.subtotal {
+  font-family: "Amazon Ember", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.subtotal__button {
+  background-color: #f3cc71;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.subtotal__button:hover {
+  background-color: #f3a847;
+}
+
+.subtotal__gift {
+  display: flex;
+  align-items: center;
+}
+
+.subtotal__gift > input {
+  margin-right: 5px;
+}

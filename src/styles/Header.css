@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+
 .header {
   background-color: #121921;
   display: flex;
@@ -5,6 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  font-family: "Amazon Ember", sans-serif;
 }
 
 .header__logo {

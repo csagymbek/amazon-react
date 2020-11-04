@@ -1,0 +1,22 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+
+.checkout {
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+}
+
+.checkout__left {
+}
+
+.checkout__ad {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.checkout__title {
+  font-family: "Amazon Ember", sans-serif;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
