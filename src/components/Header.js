@@ -4,10 +4,15 @@ import "../styles/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import {useStateValue} from "./StateProvider";
+import {auth} from "../configs/firebase";
 
 export default function Header() {
-  const [{basket}] = useStateValue();
-  console.log(basket);
+  const [{basket, user}] = useStateValue();
+
+  const handleAuthentication = () => {
+    return user && auth.signOut();
+  };
+
   return (
     <nav className="header">
       {/* logo on the left side of the header  */}
@@ -26,10 +31,10 @@ export default function Header() {
       {/* Sign In, Return, Prime  */}
       <div className="header__nav">
         {/* Sign In  */}
-        <Link className="header__link" to="/login">
-          <div className="header__option">
-            <span className="header__optionLineOne">Hello, username</span>
-            <span className="header__optionLineTwo">Sign In</span>
+        <Link className="header__link" to={!user && "/login"}>
+          <div className="header__option" onClick={handleAuthentication}>
+            <span className="header__optionLineOne">Hello, {user?.email || "Guest"}</span>
+            <span className="header__optionLineTwo">{user ? "Sign Out" : "Sign In"}</span>
           </div>
         </Link>
         {/* Returns and Orders  */}

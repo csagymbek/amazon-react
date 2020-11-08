@@ -5,13 +5,13 @@ import CheckoutProduct from "./CheckoutProduct";
 import Subtotal from "./Subtotal";
 
 export default function Checkout() {
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   return (
     <div className="checkout">
       <div className="checkout__left">
         <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/gift-certificates/consumer/2020/Holiday/GCLPBanners/ASV/holi_d_slideshow_GCLP_EN_v2_1024x180_20201021.jpg"
+          src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB42492668_.jpg"
           alt=""
           className="checkout__ad"
         />
@@ -29,7 +29,7 @@ export default function Checkout() {
           <div>
             <h2 className="checkout__title">Shopping Cart</h2>
             {/* list of all checkout products  */}
-            {basket?.map((item) => (
+            {basket.map((item) => (
               <CheckoutProduct
                 id={item.id}
                 title={item.title}

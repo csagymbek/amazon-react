@@ -3,13 +3,13 @@ import "../styles/CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
 export default function CheckoutProduct({ id, title, price, image, rating }) {
-  const [dispatch] = useStateValue();
+  const [{basket}, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
     //   remove item from the basket
     dispatch({
       type: "REMOVE_FROM_BASKET",
-      id: id,
+      id: id
     });
   };
 
@@ -25,7 +25,7 @@ export default function CheckoutProduct({ id, title, price, image, rating }) {
         <div className="checkoutProduct__rating">
           {Array(rating)
             .fill(null)
-            .map((rate) => (
+            .map((rate, i) => (
               <p>⭐</p>
             ))}
         </div>
