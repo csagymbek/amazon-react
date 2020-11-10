@@ -32,7 +32,7 @@
   width: 100%;
   max-height: 200px;
   object-fit: contain;
-  margin: 15px 0;
+  margin: 15px auto;
 }
 
 .product > button {

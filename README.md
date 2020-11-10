@@ -1,6 +1,6 @@
 # Amazon React App
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [https://react-f55d1.web.app/](https://react-f55d1.web.app/) to view it in the browser.
 
 ## List of used technologies, dependencies
 
@@ -13,6 +13,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 7. React Flip Move `npm i -S react-flip-move`
 8. Stripe Payments `npm i @stripe/tripe-js npm i @stripe/react-stripe-js`
 9. Axios fetching library `npm i axios`
+10. Express dependency `npm i express`
+11. Cors dependency `npm i cors`
+12. Library for parsing date stamps `npm i moment`
 
 ### Steps:
 
@@ -35,4 +38,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 17. Build a Cloud function to process the Stripe payment
 18. Mern Stack
 19. Install Axios fetching library
-20. Firebase deployment
+20. Install express dependency
+21. Firebase deployment

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import {useStateValue} from "./StateProvider";
-import {auth} from "../configs/firebase";
+import { useStateValue } from "./StateProvider";
+import { auth } from "../configs/firebase";
 
 export default function Header() {
-  const [{basket, user}] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
   const handleAuthentication = () => {
     return user && auth.signOut();
@@ -33,12 +33,16 @@ export default function Header() {
         {/* Sign In  */}
         <Link className="header__link" to={!user && "/login"}>
           <div className="header__option" onClick={handleAuthentication}>
-            <span className="header__optionLineOne">Hello, {user?.email || "Guest"}</span>
-            <span className="header__optionLineTwo">{user ? "Sign Out" : "Sign In"}</span>
+            <span className="header__optionLineOne">
+              Hello, {user?.email || "Guest"}
+            </span>
+            <span className="header__optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
         {/* Returns and Orders  */}
-        <Link className="header__link" to="/">
+        <Link className="header__link" to="/orders">
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
             <span className="header__optionLineTwo">& Orders</span>
@@ -57,7 +61,9 @@ export default function Header() {
             {/* Shopping basket icon  */}
             <ShoppingBasketIcon />
             {/* number of items in the basket  */}
-            <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+            <span className="header__optionLineTwo header__basketCount">
+              {basket?.length}
+            </span>
           </div>
         </Link>
       </div>
